@@ -174,3 +174,84 @@ footer a:hover{
     text-decoration: underline;
     color: white;
 }
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px){
+ 
+    .banner, .banner-cardapio{
+        height: auto;
+    }
+
+    .logo, .logo-cardapio{
+        width: 30%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .imagem-banner, .imagem-banner-cardapio{
+        width: 70%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .produtos{
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .produto{
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .produto img{
+        height: 170px;
+    }
+
+    #ornamento, #ornamento-cardapio{
+        width: 40%;
+    }
+
+    nav{
+        padding: 2px;
+    }
+
+    #ornamento-cardapio{
+        width: 28%;
+        margin: 6px auto;
+    }
+
+    nav > a{
+        display: inline-block;
+        padding: 6px;
+        font-size: 0.8em;
+    }
+
+    main{
+        width: 95%;
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+
+    main h1{
+        font-size: 1.6em;
+    }
+
+    main h2{
+        font-size: 1.2em;
+    }
+
+    .produto h3{
+        font-size: 1.2em;
+    }
+
+    .produto p{
+        font-size: 0.95em;
+    }
+
+    footer{
+        font-size: 0.8em;
+    }
+}
+
