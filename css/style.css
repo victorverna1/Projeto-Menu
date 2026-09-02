@@ -51,8 +51,15 @@ body{
     border-radius: 6px;
     font-family: var(--fonte-padrao);
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: bolder;
     cursor: pointer;
+}
+
+#botao-cardapio:hover{
+    background-color: var(--cor8);
+    color: var(--cor7);
+    transition: 0.2s;
+    transform: scale(1.03) translateY(-2px);
 }
 
 .banner{
