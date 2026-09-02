@@ -7,16 +7,91 @@
 --cor4:#2fa866;
 --cor5:#1a5c37;
 --cor6:#063d1e;
---fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+--cor7: #30391D;
+--cor8: #F3E9D2;
+--fonte-padrao: 'Work Sans', Verdana, Helvetica, sans-serif;
 --fonte-destaque: 'Bebas Neue', cursive;
 }
 
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
-    background-color:var(--cor1);
+    background-color:var(--cor7);
     font-family: var(--fonte-padrao);
+    color: var(--cor8);
+}
+
+#ornamento{
+    background-color: var(--cor7);
+    display: block;
+    width: 30%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.banner{
+    display: flex;
+    width: 100%;
+    max-height: 350px;
+}
+
+.logo{
+    width: 35%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.imagem-banner{
+    width: 65%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+main{
+    background-color: var(--cor7);
+    min-width: 400px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+}
+
+nav{
+    background-color: var(--cor7);
+    padding: 10px;
+
+}
+
+nav>a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+nav > a:hover{
+    background-color: var(--cor6);
+    color: var(--cor8);
+}
+
+footer{
+    background-color: var(--cor7);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: white;
 }
