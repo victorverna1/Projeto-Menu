@@ -14,6 +14,7 @@
 --fonte-destaque: 'Bebas Neue', cursive;
 }
 
+/* CARDAPIO */
 *{
     margin: 0px;
     padding: 0px;
@@ -49,6 +50,7 @@ body{
     color: var(--cor7);
     border: none;
     border-radius: 6px;
+    transition: 0.2s;
     font-family: var(--fonte-padrao);
     font-size: 1.2em;
     font-weight: bolder;
@@ -58,7 +60,6 @@ body{
 #botao-cardapio:hover{
     background-color: var(--cor8);
     color: var(--cor7);
-    transition: 0.2s;
     transform: scale(1.03) translateY(-2px);
 }
 
@@ -362,5 +363,22 @@ footer a:hover{
 
     footer{
         font-size: 0.8em;
+    }
+}
+
+/* HOME */
+@media(max-width: 600px){
+    #botao-cardapio{
+        width: 90%;
+        padding: 10px 12px;
+        font-size: 1em;
+    }
+
+    main h1{
+        font-size: 1.4em;
+    }
+
+    main{
+        padding: 16px 14px;
     }
 }
