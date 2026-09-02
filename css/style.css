@@ -176,19 +176,30 @@ footer a:hover{
 }
 
 /* RESPONSIVIDADE */
-@media (max-width: 768px){
- 
-    .banner, .banner-cardapio{
+
+/* TABLET */
+@media (max-width: 900px){
+
+    main{
+        width: 95%;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .banner,
+    .banner-cardapio{
         height: auto;
     }
 
-    .logo, .logo-cardapio{
+    .logo,
+    .logo-cardapio{
         width: 30%;
         height: auto;
         object-fit: contain;
     }
 
-    .imagem-banner, .imagem-banner-cardapio{
+    .imagem-banner,
+    .imagem-banner-cardapio{
         width: 70%;
         height: auto;
         object-fit: cover;
@@ -196,6 +207,91 @@ footer a:hover{
 
     .produtos{
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .produto{
+        min-width: 45%;
+        max-width: 45%;
+    }
+
+    .produto img{
+        height: 170px;
+    }
+
+    #ornamento,
+    #ornamento-cardapio{
+        width: 28%;
+    }
+
+    #ornamento-cardapio{
+        margin: 6px auto;
+    }
+
+    nav{
+        padding: 4px;
+    }
+
+    nav > a{
+        display: inline-block;
+        padding: 7px;
+        font-size: 0.9em;
+    }
+
+    main h1{
+        font-size: 1.7em;
+    }
+
+    main h2{
+        font-size: 1.3em;
+    }
+
+    .produto h3{
+        font-size: 1.2em;
+    }
+
+    .produto p{
+        font-size: 0.95em;
+    }
+
+    footer{
+        font-size: 0.9em;
+    }
+}
+
+
+/* CELULAR */
+@media (max-width: 600px){
+
+    main{
+        width: 95%;
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+
+    .banner,
+    .banner-cardapio{
+        height: auto;
+    }
+
+    .logo,
+    .logo-cardapio{
+        width: 30%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .imagem-banner,
+    .imagem-banner-cardapio{
+        width: 70%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .produtos{
+        flex-direction: column;
         align-items: center;
         gap: 18px;
     }
@@ -209,29 +305,23 @@ footer a:hover{
         height: 170px;
     }
 
-    #ornamento, #ornamento-cardapio{
-        width: 40%;
+    #ornamento,
+    #ornamento-cardapio{
+        width: 28%;
+    }
+
+    #ornamento-cardapio{
+        margin: 6px auto;
     }
 
     nav{
         padding: 2px;
     }
 
-    #ornamento-cardapio{
-        width: 28%;
-        margin: 6px auto;
-    }
-
     nav > a{
         display: inline-block;
         padding: 6px;
         font-size: 0.8em;
-    }
-
-    main{
-        width: 95%;
-        padding: 12px;
-        margin-bottom: 20px;
     }
 
     main h1{
@@ -254,4 +344,3 @@ footer a:hover{
         font-size: 0.8em;
     }
 }
-
