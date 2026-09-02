@@ -9,6 +9,7 @@
 --cor6:#063d1e;
 --cor7: #30391D;
 --cor8: #F3E9D2;
+--cor9: #B49A5A;
 --fonte-padrao: 'Work Sans', Verdana, Helvetica, sans-serif;
 --fonte-destaque: 'Bebas Neue', cursive;
 }
@@ -85,10 +86,16 @@ nav > a:hover{
 
 footer{
     background-color: var(--cor7);
-    color: white;
+    color: var(--cor8);
     text-align: center;
     font-size: 0.8em;
-    padding: 5px;
+    padding: 15px;
+    border-top: 1px solid #B49A5A;
+}
+
+footer a{
+    color: #B49A5A;
+    text-decoration: none;
 }
 
 footer a:hover{
