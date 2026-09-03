@@ -1,3 +1,5 @@
+const containerCafes = document.getElementById("cafes");
+const containerPratos = document.getElementById("pratos");
 fetch("Dados/produtos.json")
 .then(function(resposta){
     return resposta.json();
@@ -6,6 +8,40 @@ fetch("Dados/produtos.json")
     produtos.forEach(function(produto){
         const artigo = document.createElement("article");
         artigo.classList.add("produto");
-        console.log(artigo)
+        const titulo = document.createElement("h3");
+        titulo.textContent = produto.nome;
+        
+        artigo.appendChild(titulo);
+        const imagem = document.createElement("img");
+        imagem.src = produto.imagem;
+        imagem.alt = produto.nome;
+
+        const descricao = document.createElement("p");
+        descricao.textContent = produto.descricao;
+
+        const preco = document.createElement("p");
+        preco.classList.add("preco");
+        preco.textContent = produto.preco.toLocaleString("pt-BR",{
+            style: "currency",
+            currency:"BRL"
+        });
+
+        artigo.appendChild(imagem);
+        artigo.appendChild(titulo);
+        artigo.appendChild(descricao);
+        artigo.appendChild(preco);
+
+        if(produto.nome === "Cappuccino"){
+            imagem.classList.add("cappuccino");
+        }
+
+        if(produto.categoria === "cafes"){
+            containerCafes.appendChild(artigo);
+        }else if(produto.categoria === "pratos"){
+            containerPratos.appendChild(artigo);
+        }
     });
+    })
+    .catch(function(erro){
+        console.error("Erro ao carregar produtos",erro);
 });

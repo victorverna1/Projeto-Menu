@@ -36,9 +36,9 @@
     },
     {
         "nome": "Filé de Salmão",
-        "descricao": "Filé de peito de frango grelhado, acompanha arroz com opções de legumes ou fritas",
-        "preco": 49.90,
-        "imagem":"Filé de salmão com molho de maracujá, acompanha arroz negro e cogumelos salteados",
+        "descricao": "Filé de salmão com molho de maracujá, acompanha arroz negro e cogumelos salteados",
+        "preco": 79.90,
+        "imagem": "img/prato-peixe.jpg",
         "categoria": "pratos"
     }
 ]
