@@ -1,0 +1,44 @@
+[
+    {
+        "nome": "Café Expresso",
+        "descricao": "Café expresso tradicional Nespresso",
+        "preco": 8.50,
+        "imagem":"img/64ebfb18e5c3eCaptura de tela 2023-08-27 222546.png",
+        "categoria": "cafes"
+    },
+    {
+        "nome": "Cappuccino",
+        "descricao": "Cappuccino tradicional",
+        "preco": 10.50,
+        "imagem":"img/650888a9a6fcc6489cb2ecab20cafe-2.jpg",
+        "categoria": "cafes"
+    },
+    {
+        "nome": "Café Gelado",
+        "descricao": "Nosso delicioso café gelado acompanha uma bola de sorvete de creme",
+        "preco": 19.90,
+        "imagem":"img/cafe-gelado.jpg",
+        "categoria": "cafes"
+    },
+    {
+        "nome": "Fettuccine",
+        "descricao": "Nosso delicioso Fettuccine cremoso com opções de proteínas",
+        "preco": 49.90,
+        "imagem":"img/fettuccine.jpg",
+        "categoria": "pratos"
+    },
+    {
+        "nome": "Filé de Frango",
+        "descricao": "Filé de peito de frango grelhado, acompanha arroz com opções de legumes ou fritas",
+        "preco": 49.90,
+        "imagem":"img/prato-frango.jpg",
+        "categoria": "pratos"
+    },
+    {
+        "nome": "Filé de Salmão",
+        "descricao": "Filé de peito de frango grelhado, acompanha arroz com opções de legumes ou fritas",
+        "preco": 49.90,
+        "imagem":"Filé de salmão com molho de maracujá, acompanha arroz negro e cogumelos salteados",
+        "categoria": "pratos"
+    }
+]
