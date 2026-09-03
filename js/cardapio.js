@@ -3,5 +3,9 @@ fetch("Dados/produtos.json")
     return resposta.json();
 })
 .then(function(produtos){
-    console.log(produtos);
+    produtos.forEach(function(produto){
+        const artigo = document.createElement("article");
+        artigo.classList.add("produto");
+        console.log(artigo)
+    });
 });
