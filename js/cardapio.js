@@ -9,35 +9,7 @@ async function carregarProdutos() {
         }
         const produtos = await resposta.json();
         produtos.forEach(function(produto) {
-
-            const artigo = document.createElement("article");
-            artigo.classList.add("produto");
-
-            const imagem = document.createElement("img");
-            imagem.src = produto.imagem;
-            imagem.alt = produto.nome;
-
-            const titulo = document.createElement("h3");
-            titulo.textContent = produto.nome;
-
-            const descricao = document.createElement("p");
-            descricao.textContent = produto.descricao;
-
-            const preco = document.createElement("p");
-            preco.classList.add("preco");
-            preco.textContent = produto.preco.toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL"
-            });
-
-            if (produto.nome === "Cappuccino") {
-                imagem.classList.add("cappuccino");
-            }
-
-            artigo.appendChild(imagem);
-            artigo.appendChild(titulo);
-            artigo.appendChild(descricao);
-            artigo.appendChild(preco);
+            const artigo = criarCard(produto);
 
             if (produto.categoria === "cafes") {
                 containerCafes.appendChild(artigo);
@@ -46,12 +18,47 @@ async function carregarProdutos() {
             }
 
         });
-    } catch(Erro){
-        console.error("Erro ao carregar produtos:", Erro);
+    } catch(erro){
+        console.error("Erro ao carregar produtos:", erro);
     }
 }
 
 carregarProdutos();
+
+function criarCard(produto){
+    const artigo = document.createElement("article");
+    artigo.classList.add("produto");
+
+    const imagem = document.createElement("img");
+    imagem.src = produto.imagem;
+    imagem.alt = produto.nome;
+
+    const titulo = document.createElement("h3");
+    titulo.textContent = produto.nome;
+
+    const descricao = document.createElement("p");
+    descricao.textContent = produto.descricao;
+
+    const preco = document.createElement("p");
+    preco.classList.add("preco");
+    preco.textContent = produto.preco.toLocaleString(
+        "pt-BR",{
+            style: "currency",
+            currency: "BRL"
+        }
+    );
+    if(produto.nome === "Cappuccino"){
+        imagem.classList.add("cappuccino");
+    }
+
+    artigo.appendChild(imagem);
+    artigo.appendChild(titulo);
+    artigo.appendChild(descricao);
+    artigo.appendChild(preco);
+
+    return artigo;
+}
+
 
 const botaoHome = document.getElementById("botao-home");
 
