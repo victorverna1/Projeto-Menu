@@ -1,17 +1,13 @@
 const containerCafes = document.getElementById("cafes");
 const containerPratos = document.getElementById("pratos");
 
-fetch("Dados/produtos.json")
-    .then(function(resposta) {
-
-        if (!resposta.ok) {
-            throw new Error("Erro HTTP: " + resposta.status);
+async function carregarProdutos() {
+    try{
+        const resposta = await fetch("Dados/produtos.json");
+        if(!resposta.ok){
+            throw new Error("Erro HTTP: "+ resposta.status);
         }
-
-        return resposta.json();
-    })
-    .then(function(produtos) {
-
+        const produtos = await resposta.json();
         produtos.forEach(function(produto) {
 
             const artigo = document.createElement("article");
@@ -50,11 +46,12 @@ fetch("Dados/produtos.json")
             }
 
         });
+    } catch(Erro){
+        console.error("Erro ao carregar produtos:", Erro);
+    }
+}
 
-    })
-    .catch(function(erro) {
-        console.error("Erro ao carregar produtos:", erro);
-    });
+carregarProdutos();
 
 const botaoHome = document.getElementById("botao-home");
 
