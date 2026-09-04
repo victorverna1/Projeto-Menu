@@ -1,5 +1,6 @@
 const containerCafes = document.getElementById("cafes");
 const containerPratos = document.getElementById("pratos");
+
 fetch("Dados/produtos.json")
 .then(function(resposta){
     return resposta.json();
@@ -44,4 +45,9 @@ fetch("Dados/produtos.json")
     })
     .catch(function(erro){
         console.error("Erro ao carregar produtos",erro);
+});
+
+const botaoHome = document.getElementById("botao-home");
+botaoHome.addEventListener("click",function(){
+    window.location.href = "index.html";
 });

@@ -57,7 +57,27 @@ body{
     cursor: pointer;
 }
 
+#botao-home{
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: var(--cor9);
+    color: var(--cor7);
+    border: none;
+    border-radius: 6px;
+    transition: 0.2s;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
 #botao-cardapio:hover{
+    background-color: var(--cor8);
+    color: var(--cor7);
+    transform: scale(1.03) translateY(-2px);
+}
+
+#botao-home:hover{
     background-color: var(--cor8);
     color: var(--cor7);
     transform: scale(1.03) translateY(-2px);
